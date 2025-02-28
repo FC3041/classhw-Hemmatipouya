@@ -36,7 +36,7 @@ public:
         data[size++] = value;
     }
 
-    // درج عنصر در موقعیت مشخص
+   
     void insert(int index, int value) {
         if (index < 0 || index > size) {
             throw out_of_range("Index out of range");
@@ -44,7 +44,7 @@ public:
         if (size >= capacity) {
             resize(capacity == 0 ? 1 : capacity * 2);
         }
-        // جابجا کردن عناصر برای ایجاد فضای جدید
+        
         for (int i = size; i > index; i--) {
             data[i] = data[i - 1];
         }
@@ -52,7 +52,7 @@ public:
         size++;
     }
 
-    // حذف عنصر از موقعیت مشخص
+   
     void erase(int index) {
         if (index < 0 || index >= size) {
             cout<<"nadorost"<<endl;
@@ -175,7 +175,8 @@ int main() {
     char u[] = "ali";
     char y[] = "akbar";
     char * h=r.add_to_str(y,u);
-    cout<<h<<endl;
-    delete [] h;
+    char * g = r.add_to_str(u,y);
+    cout<<h<<" "<<g<<endl;
+    delete [] h;delete []g;
     return 0;
 }
