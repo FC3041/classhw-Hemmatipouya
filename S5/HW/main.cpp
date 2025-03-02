@@ -35,7 +35,7 @@ public:
         }
         data[size++] = value;
     }
-
+//jdss
    
     void insert(int index, int value) {
         if (index < 0 || index > size) {
